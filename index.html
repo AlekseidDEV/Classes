@@ -3,10 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="./js/script.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-    
+
+    <p class="title">трудоустройство в компанию "bad code and expensive"</p>
+
+    <div class="wrapp_block">
+        <div class="wrapp_input">
+            <p class="warn">Введите данные!</p>
+            <input type="text" class="inputPerson warn_messege" id="name_person" placeholder="Ваше имя">
+            <input type="text" class="inputPerson warn_messege" id="last_name" placeholder="Ваша фамилия">
+            <input type="text" class="inputPerson warn_messege" id="age" placeholder="Ваш возраст">
+            <input type="text" class="inputPerson warn_messege" id="Date_of_Birth" placeholder="Дата рождения">
+        </div>
+        <div class="select_block">
+            <p>выберете должность</p>
+            <select name="job_title" id="select_job">
+                <option value="front">Frontend - разработчик</option>
+                <option value="back">Backend - разработчик</option>
+                <option value="design">Designer Figma</option>
+                <option value="analitick">Google Аналитик</option>
+            </select>
+        </div>
+        <button class="save_data">сохранить данные</button>
+
+        <table class="personalTable" border="5">
+            <caption>Таблица сотрудников</caption>
+            <tr>
+             <th>Имя</th>
+             <th>фамилия</th>
+            </tr>
+           </table>
+    </div>
+    <table></table>
 </body>
 </html>
