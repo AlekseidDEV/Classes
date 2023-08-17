@@ -192,6 +192,11 @@ const getDataUser = (e) => {
         selectJobTitle = selectJob.options[selectJob.selectedIndex].textContent
         createNewEssense(nameUse, lastName, age, Birth, select, selectJobTitle)
     }
+
+    nameInput.value = ''
+    lastNameInput.value = ''
+    dataBirthInput.value = ''
+    ageInput.value = ''
 }
 
 btnSaveData.addEventListener('click', getDataUser)
