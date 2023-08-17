@@ -14,41 +14,41 @@ let workerArr = []
 
 class Worker {
     constructor(name = '', lastName = '', age = '', dataBirth = '') {
-       this._name = name
-       this._lastName = lastName
-       this._age = age
-       this._dataBirth = dataBirth
+        this._name = name
+        this._lastName = lastName
+        this._age = age
+        this._dataBirth = dataBirth
     }
 
-    get name(){
+    get name() {
         return this._name
     }
 
-    set name(nameWorker){
-       this.name = nameWorker
+    set name(nameWorker) {
+        this.name = nameWorker
     }
 
-    get lastName(){
+    get lastName() {
         return this._lastName
     }
 
-    set lastName(lastNameWorker){
+    set lastName(lastNameWorker) {
         this.lastName = lastNameWorker
     }
 
-    get age(){
+    get age() {
         return this._age
     }
 
-    set age(ageWorker){
+    set age(ageWorker) {
         this.age = ageWorker
     }
 
-    get dataBirth(){
+    get dataBirth() {
         return this._dataBirth
     }
 
-    set dataBirth(birthWorker){
+    set dataBirth(birthWorker) {
         this.dataBirth = birthWorker
     }
 }
@@ -149,7 +149,6 @@ const renderWorkerTable = () => {
         const deleteBtn = newField.querySelector('.delete_user')
         deleteBtn.addEventListener('click', () => {
             newField.parentNode.removeChild(newField)
-            deleteBtn.setAttribute('id', index)
             workerArr.splice(index, 1)
             saveDataStorage()
         })
