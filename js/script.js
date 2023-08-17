@@ -13,43 +13,51 @@ const tableUserBody = document.querySelector('.sub')
 let workerArr = []
 
 class Worker {
-    constructor(name, lastname, age, dataBirth) {
-        this.userName = name
-        this.useLastName = lastname
-        this.useAge = age
-        this.useDataBirth = dataBirth
+    constructor(name = '', lastName = '', age = '', dataBirth = '') {
+       this._name = name
+       this._lastName = lastName
+       this._age = age
+       this._dataBirth = dataBirth
     }
 
-    get userName() {
-        return this.name
+    get name(){
+        return this._name
     }
 
-    set userName(userName) {
-        this.name = userName
+    set name(nameWorker){
+       this.name = nameWorker
     }
 
-
-    get useAge() {
-        return this.age
+    get lastName(){
+        return this._lastName
     }
 
-    set useAge(userAge) {
-        this.age = userAge
+    set lastName(lastNameWorker){
+        this.lastName = lastNameWorker
     }
 
-    get useDataBirth() {
-        return this.dataBirth
+    get age(){
+        return this._age
     }
 
-    set useDataBirth(userBirth) {
-        this.dataBirth = userBirth
+    set age(ageWorker){
+        this.age = ageWorker
     }
 
+    get dataBirth(){
+        return this._dataBirth
+    }
+
+    set dataBirth(birthWorker){
+        this.dataBirth = birthWorker
+    }
 }
+
+
 
 class FrontendDev extends Worker {
     constructor(name, lastname, age, dataBirth, jobTitle) {
-        super(name, lastname, age, dataBirth, jobTitle)
+        super(name, lastname, age, dataBirth)
         this.userTitleJob = jobTitle
     }
 
@@ -114,16 +122,16 @@ const renderWorkerTable = () => {
         tableUserBody.append(newField)
 
         newField.innerHTML = '<td>' +
-            elem.name +
+            elem._name +
             '</td>' +
             '<td>' +
-            elem.useLastName +
+            elem._lastName +
             '</td>' +
             '<td>' +
-            elem.age +
+            elem._age +
             '</td>' +
             '<td>' +
-            elem.dataBirth +
+            elem._dataBirth +
             '</td>' +
             '<td>' +
             elem.salary +
