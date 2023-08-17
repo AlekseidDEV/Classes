@@ -146,8 +146,7 @@ const renderWorkerTable = () => {
             '<button class = "delete_user"> Удалить сотрудника</button>' +
             '</td>'
 
-        const deleteBtn = newField.querySelector('.delete_user')
-        deleteBtn.addEventListener('click', () => {
+        newField.querySelector('.delete_user').addEventListener('click', () => {
             newField.parentNode.removeChild(newField)
             workerArr.splice(index, 1)
             saveDataStorage()
